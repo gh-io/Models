@@ -4,4 +4,4 @@ curl -L \
   -H "Authorization: Bearer <YOUR-TOKEN>" \
   -H "X-GitHub-Api-Version: 2022-11-28" \
   https://models.github.ai/inference/embeddings \
-  -d '{"model":"openai/gpt-5","input":["The food was delicious and the waiter was very friendly.","I had a great time at the restaurant."]}'
+  -d '{"model":"openai/gpt-5","input":["The food was delicious and the waiter was very friendly.","I had a great time at the restaurant."]}
