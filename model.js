@@ -3,7 +3,7 @@ import { AzureKeyCredential } from "@azure/core-auth";
 
 const token = process.env["GITHUB_TOKEN"];
 const endpoint = "https://models.github.ai/inference";
-const model = "openai/gpt-5";
+const model = "qubuhub/gpt-5";
 
 export async function main() {
 
