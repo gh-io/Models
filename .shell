@@ -1,0 +1,8 @@
+npx create-instantsearch-app@latest instantsearch-app \
+    --name 'instantsearch-app' \
+    --template 'InstantSearch.js' \
+    --app-id '6O1IQFSZPV' \
+    --api-key '972bffcceeaeb855a90f661fc23d0725' \
+    --index-name 'zip_sums' \
+    --attributes-to-display 'objectID' \
+    --no-interactive
