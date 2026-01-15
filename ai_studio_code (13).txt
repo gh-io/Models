@@ -1,0 +1,29 @@
+import { GoogleGenAI } from "@google/genai";
+
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const response = await ai.models.generateContent({
+  model: 'gemini-3-pro-image-preview',
+  contents: {
+    parts: [
+      {
+        text: 'A robot holding a red skateboard.',
+      },
+    ],
+  },
+  config: {
+    imageConfig: {
+          aspectRatio: "1:1",
+          imageSize: "1K"
+      },
+    tools: [{google_search: {}}], // Optional, only available for `gemini-3-pro-image-preview`.
+  },
+});
+for (const part of response.candidates[0].content.parts) {
+  // Find the image part, do not assume it is the first part.
+  if (part.inlineData) {
+    const base64EncodeString: string = part.inlineData.data;
+    const imageUrl = `data:image/png;base64,${base64EncodeString}`;
+  } else if (part.text) {
+    console.log(part.text);
+  }
+}

@@ -1,0 +1,17 @@
+model: qwen/qwen3-8b
+base:
+  - key: lmstudio-community/qwen3-8b-gguf
+    sources:
+      - type: huggingface
+        user: lmstudio-community
+        repo: Qwen3-8B-GGUF
+  - key: lmstudio-community/qwen3-8b-mlx-4bit
+    sources:
+      - type: huggingface
+        user: lmstudio-community
+        repo: Qwen3-8B-MLX-4bit
+  - key: lmstudio-community/qwen3-8b-mlx-8bit
+    sources:
+      - type: huggingface
+        user: lmstudio-community
+        repo: Qwen3-8B-MLX-8bit

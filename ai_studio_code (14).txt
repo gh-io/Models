@@ -1,0 +1,9 @@
+import { GoogleGenAI } from "@google/genai";
+
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const response = await ai.models.generateContent({
+  model: 'gemini-3-flash-preview',
+  contents: 'why is the sky blue?',
+});
+
+console.log(response.text);
