@@ -20,3 +20,6 @@
       # Usage API
       npm install @algolia/client-usage
     
+
+dotnet add package Algolia.Search --version 7.0.0
+Install-Package Algolia.Search -Version 7.0.0
